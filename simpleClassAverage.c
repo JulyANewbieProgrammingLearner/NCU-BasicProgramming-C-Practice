@@ -116,15 +116,15 @@ size_t defGrade(void)
 
 float averageGrade(size_t _NumofStudents, int _arr[_NumofStudents])
 {
-    float Average = 0;
+    float fSum = 0;
 
     for(size_t i = 0; i < _NumofStudents; i += 1)
     {
-        Average += _arr[i];
+        fSum += _arr[i];
     } // end arr
 
-    Average = Average / _NumofStudents;
+    float fAverage = fSum / _NumofStudents;
 
-    return Average;  
+    return fAverage;  
 } // end averageGrade
 
