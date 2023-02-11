@@ -14,16 +14,23 @@ unsigned int Power(unsigned int base); // hold value
 // start main
 int main(void)
 {
+    printf("The program will help you judge the type of triangle.\n");
+    
     unsigned int uilength1 = 0;
     unsigned int uilength2 = 0;
     unsigned int uilength3 = 0;
 
     printf("Please enter the length of side of triangle: ");
-    scanf("%d %d %d", &uilength1, &uilength2, &uilength3);
+    scanf("%d", &uilength1);
+    scanf("%d", &uilength2);
+    scanf("%d", &uilength3);
+    
     while(uilength1 <= 0 || uilength2 <= 0 || uilength3 <= 0)
     {
         printf("Please enter the length of side of triangle again: ");
-        scanf("%d %d %d", &uilength1, &uilength2, &uilength3);
+        scanf("%d", &uilength1);
+        scanf("%d", &uilength2);
+        scanf("%d", &uilength3);
     } // end while
 
     if(uilength1 == uilength2 && uilength2 == uilength3)
