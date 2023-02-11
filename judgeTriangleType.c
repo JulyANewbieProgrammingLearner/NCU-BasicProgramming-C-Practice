@@ -2,11 +2,11 @@
 #include <math.h>
 
 // function prototype
-unsigned int Bigger(unsigned int x, unsigned int y);
-unsigned int whichMax(unsigned int a, unsigned int b, unsigned int c);
-unsigned int Smaller(unsigned int m, unsigned int n);
-unsigned int whichMin(unsigned int a, unsigned int b, unsigned int c);
-unsigned int whichMedium(unsigned int _a, unsigned int _b, unsigned int _c);
+unsigned int Bigger(unsigned int x, unsigned int y); // find the bigger number
+unsigned int whichMax(unsigned int a, unsigned int b, unsigned int c); // find the maximum number
+unsigned int Smaller(unsigned int m, unsigned int n); // find the smaller number
+unsigned int whichMin(unsigned int a, unsigned int b, unsigned int c); // find the minimum number
+unsigned int whichMedium(unsigned int _a, unsigned int _b, unsigned int _c); // find medium number
 void isTriangle_different_Length(unsigned int a, unsigned int b, unsigned int c);
 void isTriangle_TwoEqualLength(unsigned int a, unsigned int b, unsigned int c);
 unsigned int Power(unsigned int base);
