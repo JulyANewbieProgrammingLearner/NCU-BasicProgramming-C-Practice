@@ -24,7 +24,7 @@ int main(void)
     {
         printf("Please enter the length of side of triangle again: ");
         scanf("%d %d %d", &uilength1, &uilength2, &uilength3);
-    }
+    } // end while
 
     if(uilength1 == uilength2 && uilength2 == uilength3)
     {
@@ -37,7 +37,7 @@ int main(void)
     else
     {
         isTriangle_TwoEqualLength(uilength1, uilength2, uilength3);
-    }
+    } // end if
 } // end main
 
 unsigned int Bigger(unsigned int _x, unsigned int _y)
@@ -52,7 +52,8 @@ unsigned int Bigger(unsigned int _x, unsigned int _y)
         uiBig = _y;
     }
     return uiBig;
-}
+} // end Bigger
+
 unsigned int whichMax(unsigned int _a, unsigned int _b, unsigned int _c)
 {
     unsigned int uiLeftBig = Bigger(_a, _b);
@@ -60,7 +61,8 @@ unsigned int whichMax(unsigned int _a, unsigned int _b, unsigned int _c)
     unsigned int uiMax = Bigger(uiLeftBig, uiRightBig);
     
     return uiMax;
-}
+} // end whichMax
+
 unsigned int Smaller(unsigned int _m, unsigned int _n)
 {
     unsigned int uiSmall;
@@ -73,7 +75,8 @@ unsigned int Smaller(unsigned int _m, unsigned int _n)
         uiSmall = _m;
     }
     return uiSmall;
-}
+} // end Smaller
+
 unsigned int whichMin(unsigned int _a, unsigned int _b, unsigned int _c)
 {
     unsigned int uiLeftSmall = Smaller(_a, _b);
@@ -81,7 +84,8 @@ unsigned int whichMin(unsigned int _a, unsigned int _b, unsigned int _c)
     unsigned int uiMin = Smaller(uiLeftSmall, uiRightSmall);
 
     return uiMin;
-}
+} // end whichMin
+
 unsigned int whichMedium(unsigned int _a, unsigned int _b, unsigned int _c)
 {
     unsigned int uiT;
@@ -101,7 +105,8 @@ unsigned int whichMedium(unsigned int _a, unsigned int _b, unsigned int _c)
     }
 
     return uiTermiMedi;
-}
+} // end whichMedium
+
 void isTriangle_different_Length(unsigned int _uilength1, unsigned int _uilength2, unsigned int _uilength3)
 {
     unsigned int uiLength_Maximum = whichMax(_uilength1, _uilength2, _uilength3);
@@ -124,7 +129,8 @@ void isTriangle_different_Length(unsigned int _uilength1, unsigned int _uilength
     {
         printf("This is not a triangle.\n");
     }
-}
+} // end isTriangle_different_Length
+
 void isTriangle_TwoEqualLength(unsigned int _uilength1, unsigned int _uilength2, unsigned int _uilength3)
 {
     unsigned int uiTwoSide;
@@ -158,10 +164,11 @@ void isTriangle_TwoEqualLength(unsigned int _uilength1, unsigned int _uilength2,
     {
         printf("This is not a triangle.\n");
     } // end 2nd if
-}
+} // end isTriangle_TwoEqualLength
+
 unsigned int Power(unsigned int _uibase)
 {
     unsigned int uipower_result = pow(_uibase, 2);
 
     return uipower_result;
-}
+} // end Power
