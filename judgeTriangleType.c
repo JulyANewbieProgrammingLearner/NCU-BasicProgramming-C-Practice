@@ -7,11 +7,9 @@ unsigned int whichMax(unsigned int a, unsigned int b, unsigned int c); // find t
 unsigned int Smaller(unsigned int m, unsigned int n); // find the smaller number
 unsigned int whichMin(unsigned int a, unsigned int b, unsigned int c); // find the minimum number
 unsigned int whichMedium(unsigned int _a, unsigned int _b, unsigned int _c); // find medium number
-void isTriangle_different_Length(unsigned int a, unsigned int b, unsigned int c);
-void isTriangle_TwoEqualLength(unsigned int a, unsigned int b, unsigned int c);
-unsigned int Power(unsigned int base);
-void isTriangle_TwoEqualLength(unsigned int a, unsigned int b, unsigned int c);
-
+void isTriangle_different_Length(unsigned int a, unsigned int b, unsigned int c); // judge which triangle
+void isTriangle_TwoEqualLength(unsigned int a, unsigned int b, unsigned int c); // judge is isosceles triangle
+unsigned int Power(unsigned int base); // hold value
 
 // start main
 int main(void)
