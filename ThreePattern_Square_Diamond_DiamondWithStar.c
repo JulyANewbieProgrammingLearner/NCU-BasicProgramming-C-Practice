@@ -7,17 +7,17 @@
 #include <stdio.h>
 
 // function prototype
-void initiArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]);
-size_t defSquareNUM(void);
-size_t defSquareSize(void);
-size_t defDiamondSIZE(void);
+void initiArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]); // initialize array2D
+size_t defSquareNUM(void); // ensure valid square number
+size_t defSquareSize(void); // ensure valid square size
+size_t defDiamondSIZE(void); // ensure valid diamond size
 void SquareArray_F1(size_t squareSIZE, int printNUM, int Array2D[squareSIZE][squareSIZE]);
-void printArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]);
-void diamondArray2D(size_t userEnterSIZE, size_t diamondSquareSIZE, int diamond2D[diamondSquareSIZE][diamondSquareSIZE]);
-void printDiamondArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]);
-size_t defSquareF3(void);
-void square_starArray2D(size_t SquareSIZE, int Array2D[SquareSIZE][SquareSIZE]);
-void printSquareStarArray2D(size_t SquareSIZE, int Array2D[SquareSIZE][SquareSIZE]);
+void printArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]); // print out square
+void diamondArray2D(size_t userEnterSIZE, size_t diamondSquareSIZE, int diamond2D[diamondSquareSIZE][diamondSquareSIZE]); // define diamond
+void printDiamondArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]); // print out diamond
+size_t defSquareF3(void); // ensure F3 valid square size
+void square_starArray2D(size_t SquareSIZE, int Array2D[SquareSIZE][SquareSIZE]); // decide array2D_F3 content
+void printSquareStarArray2D(size_t SquareSIZE, int Array2D[SquareSIZE][SquareSIZE]); // print out the square with stars
 
 // start main
 int main(void)
