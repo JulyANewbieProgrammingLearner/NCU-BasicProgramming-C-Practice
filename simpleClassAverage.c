@@ -1,9 +1,10 @@
 /*
-Calculate loop(menu num != 1)
-def ArraySize by the user
-input numers to store in arr1D
-fAver store the value of average of elements
-print fAver
+Work flow:
+    1. Calculate loop(menu num != 1)
+    2. def ArraySize by the user
+    3. input numers to store in arr1D
+    4. fAver store the value of average of elements
+    5. print fAver
 */
 
 #include <stdio.h>
