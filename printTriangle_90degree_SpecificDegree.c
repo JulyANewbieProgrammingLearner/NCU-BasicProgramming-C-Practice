@@ -21,19 +21,20 @@ void RotateSpecificDegree(size_t SquareSIZE, int SpecificDegree, int Array2D[Squ
 // start main
 int main(void)
 {
-    size_t iTriangle_Size = 0;
+    size_t iTriangle_Size = 0; // def and initi the variable
 
-    iTriangle_Size = defTriangleSIZE();
+    iTriangle_Size = defTriangleSIZE(); // read and store valid value of triangle size
 
-    int iArray2d[iTriangle_Size][iTriangle_Size];
-    initiArray2D(iTriangle_Size, iArray2d);
-    int tempArray2d[iTriangle_Size][iTriangle_Size];
-    initiArray2D(iTriangle_Size, tempArray2d);
+    int iArray2d[iTriangle_Size][iTriangle_Size]; // def the arr2D
+    initiArray2D(iTriangle_Size, iArray2d); // initi arr2D
+    int tempArray2d[iTriangle_Size][iTriangle_Size]; // def temporary arr2D
+    initiArray2D(iTriangle_Size, tempArray2d); // initi temporary arr2D
 
-    int iSepecificDegree_user = 0;
+    int iSepecificDegree_user = 0; // def and initi the variable
 
-    int iFuncNum = 0;
+    int iFuncNum = 0; // def and initi the variable
 
+    // intro str
     printf("This program will do several things:\n");
     puts("1. Print triangle");
     puts("2. Rotate 90 degree");
@@ -48,31 +49,31 @@ int main(void)
         switch(iFuncNum)
         {
             case 1:
-                printf("triangle\n");
-                TriangleArray(iTriangle_Size, iArray2d);
-                printArray2D(iTriangle_Size, iArray2d);
+                printf("Triangle\n");
+                TriangleArray(iTriangle_Size, iArray2d); // decide the pattern of triangle arr2D
+                printArray2D(iTriangle_Size, iArray2d); // print out the arr2D
                     break;
             case 2:
                 printf("Rotate 90 \n");
-                Rotate90Degree_clockwise(iTriangle_Size, iArray2d, tempArray2d);
-                printArray2D(iTriangle_Size, iArray2d);
+                Rotate90Degree_clockwise(iTriangle_Size, iArray2d, tempArray2d); // rotate and store the arr2D into temporary arr2D
+                printArray2D(iTriangle_Size, iArray2d); // print out the transformed arr2D 
                     break;
             case 3:
                 printf("Rotate specific degree\n");
-                iSepecificDegree_user = defSpecificDegree();
-                RotateSpecificDegree(iTriangle_Size, iSepecificDegree_user, iArray2d, tempArray2d);
-                printArray2D(iTriangle_Size, iArray2d);
+                iSepecificDegree_user = defSpecificDegree(); // ensure the degree to be the multiple degree of 90 degree
+                RotateSpecificDegree(iTriangle_Size, iSepecificDegree_user, iArray2d, tempArray2d); // rotate and store the arr2D to the temporary arr2D
+                printArray2D(iTriangle_Size, iArray2d); // print out the transformed arr2D
                     break;
             case 4:
-                printf("End program\n");
+                printf("End program\n"); // ending str
                     break;
             default:
-                printf("Invalid function number...\n");
+                printf("Invalid function number...\n"); // other cases str
                     break;
         }
     } while (iFuncNum != 4);
 
-    printf("Goodbye.\n");
+    printf("Goodbye.\n"); // goodbye str
 } // end main
 
 // def function
