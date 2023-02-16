@@ -21,18 +21,18 @@ void printUniqueArray1D(size_t size, int Array1D[size]); // print the UniqueArra
 // start main
 int main(void)
 {
-    size_t Array1D_size = defArray1DSIZE();
-    int iArray1D[Array1D_size];
-    initiArray1D(Array1D_size, iArray1D);
+    size_t Array1D_size = defArray1DSIZE(); // read and store the value of size
+    int iArray1D[Array1D_size]; // declare the arr1D
+    initiArray1D(Array1D_size, iArray1D); // initi the arr1D
 
-    selfDefArray1D_value(Array1D_size, iArray1D);
+    selfDefArray1D_value(Array1D_size, iArray1D); // read and store the value of element of arr1D
     printf("The original array: ");
-    printfArray1D(Array1D_size, iArray1D);
+    printfArray1D(Array1D_size, iArray1D); // print out the num in the form of arr1D, which user entered previously
     
-    sortArray1D_AscendingORDER(Array1D_size, iArray1D);
-    printfArray1D(Array1D_size, iArray1D);
+    sortArray1D_AscendingORDER(Array1D_size, iArray1D); // sort the element in ascending order
+    printfArray1D(Array1D_size, iArray1D); // print out arr1D (ascending)
 
-    printUniqueArray1D(Array1D_size, iArray1D);
+    printUniqueArray1D(Array1D_size, iArray1D); // print out the unique arr1D
 } // end main
 
 // def function
