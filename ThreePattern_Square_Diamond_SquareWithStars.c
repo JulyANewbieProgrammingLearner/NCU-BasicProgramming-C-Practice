@@ -11,7 +11,7 @@ void initiArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]); // in
 size_t defSquareNUM(void); // ensure valid square number
 size_t defSquareSize(void); // ensure valid square size
 size_t defDiamondSIZE(void); // ensure valid diamond size
-void SquareArray_F1(size_t squareSIZE, int printNUM, int Array2D[squareSIZE][squareSIZE]);
+void SquareArray_F1(size_t squareSIZE, int printNUM, int Array2D[squareSIZE][squareSIZE]); // decide arr2D_F1 pattern
 void printArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]); // print out square
 void diamondArray2D(size_t userEnterSIZE, size_t diamondSquareSIZE, int diamond2D[diamondSquareSIZE][diamondSquareSIZE]); // define diamond
 void printDiamondArray2D(size_t squareSIZE, int Array2D[squareSIZE][squareSIZE]); // print out diamond
@@ -30,6 +30,7 @@ int main(void)
     // int iDiamondArray2D[stSquareSIZE_F2][stSquareSIZE_F2];
     // initiArray2D(stSquareSIZE_F2, iDiamondArray2D);
 
+    // intro str
     printf("Please choose which pattern you want to print: \n");
     puts("1. Square pattern");
     puts("2. Diamond pattern");
@@ -38,41 +39,41 @@ int main(void)
 
     do
     {
-        printf("Enter the pattern number: ");
-        scanf("%d", &iFunctionNUM);
+        printf("Enter the pattern number: "); // prompt user enter the pattern number
+        scanf("%d", &iFunctionNUM); // read and store the num
         
         if(iFunctionNUM == 1)
         {
             puts("Square pattern:");
-            stPrintNum_F1 = defSquareNUM();
-            stSquareSIZE_F1 = defSquareSize();
-            int iSquare2D[stSquareSIZE_F1][stSquareSIZE_F1];
-            initiArray2D(stSquareSIZE_F1, iSquare2D);
+            stPrintNum_F1 = defSquareNUM(); // ensure the number between 0 and 9
+            stSquareSIZE_F1 = defSquareSize(); // ensure the square size
+            int iSquare2D[stSquareSIZE_F1][stSquareSIZE_F1]; // declare arr2D
+            initiArray2D(stSquareSIZE_F1, iSquare2D); // initi arr2D
 
-            SquareArray_F1(stSquareSIZE_F1, stPrintNum_F1, iSquare2D);
-            printArray2D(stSquareSIZE_F1, iSquare2D);
+            SquareArray_F1(stSquareSIZE_F1, stPrintNum_F1, iSquare2D); // deal with the arr2D pattern
+            printArray2D(stSquareSIZE_F1, iSquare2D); // print out the pattern
         }
         else if(iFunctionNUM == 2)
         {
             puts("Diamond pattern:");
             size_t stUSER_DiamondSIZE = defDiamondSIZE();
-            stSquareSIZE_F2 = stUSER_DiamondSIZE * 2 - 1;
-            int iDiamond2D[stSquareSIZE_F2][stSquareSIZE_F2];
-            initiArray2D(stSquareSIZE_F2, iDiamond2D);
+            stSquareSIZE_F2 = stUSER_DiamondSIZE * 2 - 1; // declare the square size
+            int iDiamond2D[stSquareSIZE_F2][stSquareSIZE_F2]; // declare the arr2D
+            initiArray2D(stSquareSIZE_F2, iDiamond2D); // initi the arr2D
 
-            diamondArray2D(stUSER_DiamondSIZE, stSquareSIZE_F2, iDiamond2D);
-            printDiamondArray2D(stSquareSIZE_F2, iDiamond2D);
+            diamondArray2D(stUSER_DiamondSIZE, stSquareSIZE_F2, iDiamond2D); // decide the pattern of diamond
+            printDiamondArray2D(stSquareSIZE_F2, iDiamond2D); // print out the diamond
         }
         else if(iFunctionNUM == 3)
         {
             puts("Square pattern with stars:");
             printf("Enter the size you want ");
-            size_t stUserEnterSIZE = defSquareF3();
-            int iSquareWithStarArray2D[stUserEnterSIZE][stUserEnterSIZE];
-            initiArray2D(stUserEnterSIZE, iSquareWithStarArray2D);
+            size_t stUserEnterSIZE = defSquareF3(); // read and store the value of the square size
+            int iSquareWithStarArray2D[stUserEnterSIZE][stUserEnterSIZE]; // declare the square arr2D
+            initiArray2D(stUserEnterSIZE, iSquareWithStarArray2D); // initi the square arr2D
 
-            square_starArray2D(stUserEnterSIZE, iSquareWithStarArray2D);
-            printSquareStarArray2D(stUserEnterSIZE, iSquareWithStarArray2D);
+            square_starArray2D(stUserEnterSIZE, iSquareWithStarArray2D); // decide the pattern of the square with stars
+            printSquareStarArray2D(stUserEnterSIZE, iSquareWithStarArray2D); // print out the square with stars
         }
         else if(iFunctionNUM == 4)
         {
@@ -83,7 +84,7 @@ int main(void)
             puts("Invalid number...");
         } // end if           
         
-    } while (iFunctionNUM != 4);
+    } while (iFunctionNUM != 4); // end do while
 
     printf("Goodbye.\n");
 } // end main
