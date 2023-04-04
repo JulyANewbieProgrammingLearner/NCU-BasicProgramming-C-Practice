@@ -31,7 +31,7 @@ void printArray(int _iArrayName[], int _luIndex_size)
     {
         printf("Array[%u]: %d\n", j, _iArrayName[j]);
     }
-}
+} // end printArray
 
 void initiArray(int _index_size, int _array[_index_size])
 {
@@ -39,7 +39,7 @@ void initiArray(int _index_size, int _array[_index_size])
     {
         _array[j] = 0;
     }
-}
+} // end initiArray
 
 void storeUserInput(int _index_size, int _array[_index_size])
 {
